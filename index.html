@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONE AHMEDABAD - Unified Digital Citizen Services Platform">
+    <title>ONE AHMEDABAD | Citizen Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="brand" onclick="showPage('home')">
+            <div class="brand-logo">A</div>
+            <div>
+                <h2>ONE AHMEDABAD</h2>
+                <span>Digital Citizen Services</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('services')">Services</a>
+            <a href="#" onclick="showPage('complaints')">Complaints</a>
+            <a href="#" onclick="showPage('track')">Track Request</a>
+            <a href="#" onclick="showPage('about')">About</a>
+        </nav>
+
+        <div class="nav-actions" id="navActions">
+            <button class="btn-outline" onclick="showPage('login')">Login</button>
+            <button class="btn-primary" onclick="showPage('register')">Register</button>
+        </div>
+
+        <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <main>
+
+        <!-- HOME PAGE -->
+        <section id="home" class="page active">
+
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="eyebrow">AHMEDABAD MUNICIPAL SERVICES</span>
+
+                    <h1>Your City.<br>
+                        Your Services.<br>
+                        <span>One Digital Platform.</span>
+                    </h1>
+
+                    <p>
+                        Access municipal services, pay bills, submit civic
+                        complaints and track applications through one
+                        simple digital platform.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="showPage('services')">
+                            Explore Services →
+                        </button>
+
+                        <button class="btn-outline" onclick="showPage('complaints')">
+                            Report an Issue
+                        </button>
+                    </div>
+
+                    <div class="hero-note">
+                        A smarter and more connected Ahmedabad.
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="city-card">
+                        <div class="city-icon">🏙️</div>
+                        <h3>One Ahmedabad</h3>
+                        <p>Connected Citizen Services</p>
+                        <div class="city-stat">
+                            <span>Digital</span>
+                            <span>Accessible</span>
+                            <span>Transparent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUICK SERVICES -->
+            <section class="section">
+                <div class="section-heading">
+                    <span class="eyebrow">CITIZEN CONVENIENCE</span>
+                    <h2>What would you like to do?</h2>
+                    <p>Access important municipal services in one place.</p>
+                </div>
+
+                <div class="service-grid">
+
+                    <article class="service-card" onclick="showPage('property')">
+                        <div class="service-icon">🏠</div>
+                        <h3>Property Tax</h3>
+                        <p>View property tax information and payment records.</p>
+                        <span>Explore service →</span>
+                    </article>
+
+                    <article class="service-card" onclick="showPage('water')">
+                        <div class="service-icon">💧</div>
+                        <h3>Water Services</h3>
+                        <p>Access water bill information and payment workflow.</p>
+                        <span>Explore service →</span>
+                    </article>
+
+                    <article class="service-card" onclick="showPage('certificates')">
+                        <div class="service-icon">📄</div>
+                        <h3>Certificates</h3>
+                        <p>Birth and death certificate application workflows.</p>
+                        <span>Explore service →</span>
+                    </article>
+
+                    <article class="service-card" onclick="showPage('complaints')">
+                        <div class="service-icon">🛠️</div>
+                        <h3>Civic Complaints</h3>
+                        <p>Report garbage, road, water and streetlight issues.</p>
+                        <span>Report now →</span>
+                    </article>
+
+                </div>
+
+                <button class="btn-outline" onclick="showPage('services')">
+                    View All Services
+                </button>
+            </section>
+
+            <!-- HOW IT WORKS -->
+            <section class="section how-section">
+                <div class="section-heading">
+                    <span class="eyebrow">SIMPLE. DIGITAL. TRANSPARENT.</span>
+                    <h2>How ONE AHMEDABAD works</h2>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <span>01</span>
+                        <h3>Register</h3>
+                        <p>Create your citizen account.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span>02</span>
+                        <h3>Choose a Service</h3>
+                        <p>Find the municipal service you need.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span>03</span>
+                        <h3>Submit a Request</h3>
+                        <p>Complete your application or complaint.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <span>04</span>
+                        <h3>Track Progress</h3>
+                        <p>Follow your request status.</p>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- LOGIN PAGE -->
+        <section id="login" class="page auth-page">
+            <div class="auth-card">
+                <span class="eyebrow">WELCOME BACK</span>
+                <h2>Citizen Login</h2>
+                <p>Sign in to access your digital services.</p>
+
+                <form id="loginForm">
+                    <label>Email Address</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+                    <label>Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+                    <button type="submit" class="btn-primary full-width">
+                        Login to Account
+                    </button>
+                </form>
+
+                <p>Don't have an account?
+                    <a href="#" onclick="showPage('register')">Register here</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- REGISTER PAGE -->
+        <section id="register" class="page auth-page">
+            <div class="auth-card">
+                <span class="eyebrow">JOIN ONE AHMEDABAD</span>
+                <h2>Create Citizen Account</h2>
+                <p>Register to access municipal services.</p>
+
+                <form id="registerForm">
+
+                    <label>Full Name</label>
+                    <input type="text" id="registerName" placeholder="Enter your full name" minlength="2" maxlength="50"
+                        pattern="[A-Za-z ]{2,50}" title="Enter a name using letters and spaces only." required>
+
+                    <label>Email Address</label>
+                    <input type="email" id="registerEmail" placeholder="Enter your email" required>
+
+                    <label>Mobile Number</label>
+                    <input type="tel" id="registerPhone" placeholder="Enter your 10-digit mobile number" minlength="10"
+                        maxlength="10" pattern="[6-9][0-9]{9}" inputmode="numeric"
+                        title="Enter a valid 10-digit Indian mobile number starting with 6, 7, 8 or 9." required>
+
+                    <label>Password</label>
+                    <input type="password" id="registerPassword" placeholder="Create a strong password" minlength="8"
+                        title="Use at least 8 characters with uppercase, lowercase, number and special character."
+                        required>
+
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" minlength="8"
+                        required>
+
+                    <button type="submit" class="btn-primary full-width">
+                        Create Account
+                    </button>
+
+                </form>
+
+                <p>Already registered?
+                    <a href="#" onclick="showPage('login')">Login here</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- CITIZEN DASHBOARD -->
+        <section id="dashboard" class="page dashboard-page">
+
+            <div class="dashboard-heading">
+                <div>
+                    <span class="eyebrow">CITIZEN PORTAL</span>
+                    <h1>Welcome, <span id="citizenName">Citizen</span></h1>
+                    <p>Manage your municipal services from one place.</p>
+                </div>
+
+                <button class="btn-outline" onclick="logout()">Logout</button>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span>My Complaints</span>
+                    <h2 id="myComplaintCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Pending Requests</span>
+                    <h2 id="pendingCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Resolved Requests</span>
+                    <h2 id="resolvedCount">0</h2>
+                </div>
+            </div>
+
+            <div class="section-heading">
+                <h2>My Services</h2>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card" onclick="showPage('complaints')">
+                    <div class="service-icon">📢</div>
+                    <h3>Submit Complaint</h3>
+                    <p>Report a civic issue.</p>
+                </article>
+
+                <article class="service-card" onclick="showPage('track')">
+                    <div class="service-icon">🔎</div>
+                    <h3>Track Requests</h3>
+                    <p>Check your submitted requests.</p>
+                </article>
+
+                <article class="service-card" onclick="showPage('profile')">
+                    <div class="service-icon">👤</div>
+                    <h3>My Profile</h3>
+                    <p>View your account details.</p>
+                </article>
+            </div>
+
+            <h2>Recent Requests</h2>
+            <div id="citizenRequests"></div>
+
+        </section>
+
+        <!-- ALL SERVICES -->
+        <section id="services" class="page section">
+
+            <div class="section-heading">
+                <span class="eyebrow">MUNICIPAL SERVICE DIRECTORY</span>
+                <h1>Explore Our Services</h1>
+                <p>Discover digital access to essential civic services.</p>
+            </div>
+
+            <div class="service-grid">
+
+                <article class="service-card" onclick="showPage('property')">
+                    <div class="service-icon">🏠</div>
+                    <h3>Property Tax</h3>
+                    <p>Property tax details and payment workflow.</p>
+                </article>
+
+                <article class="service-card" onclick="showPage('water')">
+                    <div class="service-icon">💧</div>
+                    <h3>Water Bill</h3>
+                    <p>Water billing information and payment workflow.</p>
+                </article>
+
+                <article class="service-card" onclick="showPage('certificates')">
+                    <div class="service-icon">📜</div>
+                    <h3>Birth & Death Certificates</h3>
+                    <p>Apply for certificate services.</p>
+                </article>
+
+                <article class="service-card" onclick="showPage('building')">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Building Permission</h3>
+                    <p>Building permission application workflow.</p>
+                </article>
+
+                <article class="service-card" onclick="showPage('trade')">
+                    <div class="service-icon">🏪</div>
+                    <h3>Trade Licence</h3>
+                    <p>Trade licence application workflow.</p>
+                </article>
+
+                <article class="service-card" onclick="showPage('complaints')">
+                    <div class="service-icon">🚧</div>
+                    <h3>Civic Complaints</h3>
+                    <p>Report public infrastructure issues.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- COMPLAINT FORM -->
+        <section id="complaints" class="page form-page">
+
+            <div class="form-container">
+                <span class="eyebrow">CITIZEN GRIEVANCE PORTAL</span>
+                <h1>Report a Civic Issue</h1>
+                <p>Help make Ahmedabad cleaner, safer and smarter.</p>
+
+                <form id="complaintForm">
+
+                    <label>Complaint Title</label>
+                    <input type="text" id="complaintTitle" placeholder="Example: Garbage collection issue" minlength="5"
+                        maxlength="100" required>
+
+                    <label>Complaint Category</label>
+                    <select id="complaintCategory" required>
+                        <option value="">Select category</option>
+                        <option>Garbage Management</option>
+                        <option>Road Damage / Pothole</option>
+                        <option>Water Leakage</option>
+                        <option>Streetlight Issue</option>
+                        <option>Drainage Problem</option>
+                        <option>Public Sanitation</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Complaint Description</label>
+                    <textarea id="complaintDescription" placeholder="Describe the issue in detail..." minlength="10"
+                        maxlength="1000" required></textarea>
+
+                    <label>Location / Address</label>
+                    <input type="text" id="complaintLocation" placeholder="Enter issue location" minlength="3" required>
+
+                    <button type="button" class="btn-outline" onclick="getLocation()">
+                        📍 Use My Current Location
+                    </button>
+
+                    <input type="hidden" id="latitude">
+                    <input type="hidden" id="longitude">
+
+                    <label>Upload Issue Photograph</label>
+                    <input type="file" id="complaintImage" accept="image/*">
+
+                    <div id="imagePreview"></div>
+
+                    <div id="aiSuggestion" class="ai-suggestion">
+                        AI complaint assistance will appear here.
+                    </div>
+
+                    <button type="submit" class="btn-primary full-width">
+                        Submit Complaint
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- TRACK REQUEST -->
+        <section id="track" class="page form-page">
+
+            <div class="form-container">
+                <span class="eyebrow">TRANSPARENT SERVICE TRACKING</span>
+                <h1>Track Your Request</h1>
+                <p>Enter your unique reference ID to check progress.</p>
+
+                <form id="trackForm">
+                    <label>Reference ID</label>
+                    <input type="text" id="trackingId" placeholder="Example: AMC-2026-12345" required>
+
+                    <button class="btn-primary full-width" type="submit">
+                        Track Request
+                    </button>
+                </form>
+
+                <div id="trackingResult"></div>
+            </div>
+
+        </section>
+
+        <!-- PROPERTY TAX -->
+        <section id="property" class="page form-page">
+            <div class="form-container">
+                <span class="eyebrow">PROPERTY SERVICES</span>
+                <h1>Property Tax Services</h1>
+                <p>Access property tax information and payment workflow.</p>
+
+                <form id="propertyForm">
+                    <label>Property Identification Number</label>
+                    <input id="propertyId" type="text" placeholder="Enter property ID" required>
+
+                    <button class="btn-primary full-width" type="submit">
+                        View Property Information
+                    </button>
+                </form>
+
+                <div id="propertyResult"></div>
+            </div>
+        </section>
+
+        <!-- WATER SERVICES -->
+        <section id="water" class="page form-page">
+            <div class="form-container">
+                <span class="eyebrow">WATER SERVICES</span>
+                <h1>Water Bill Services</h1>
+                <p>Access water billing information.</p>
+
+                <form id="waterForm">
+                    <label>Consumer Number</label>
+                    <input id="consumerId" type="text" placeholder="Enter consumer number" required>
+
+                    <button class="btn-primary full-width" type="submit">
+                        View Bill Information
+                    </button>
+                </form>
+
+                <div id="waterResult"></div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="page form-page">
+            <div class="form-container">
+                <span class="eyebrow">CIVIL REGISTRATION SERVICES</span>
+                <h1>Birth & Death Certificates</h1>
+
+                <form id="certificateForm">
+                    <label>Application Type</label>
+                    <select id="certificateType" required>
+                        <option value="">Select type</option>
+                        <option>Birth Certificate</option>
+                        <option>Death Certificate</option>
+                    </select>
+
+                    <label>Applicant Name</label>
+                    <input id="certificateApplicant" type="text" minlength="2" maxlength="50" pattern="[A-Za-z ]{2,50}"
+                        required>
+
+                    <label>Contact Email</label>
+                    <input id="certificateEmail" type="email" required>
+
+                    <label>Additional Details</label>
+                    <textarea id="certificateDetails" maxlength="1000"></textarea>
+
+                    <button class="btn-primary full-width" type="submit">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- BUILDING PERMISSION -->
+        <section id="building" class="page form-page">
+            <div class="form-container">
+                <span class="eyebrow">CONSTRUCTION SERVICES</span>
+                <h1>Building Permission</h1>
+
+                <form id="buildingForm">
+                    <label>Applicant Name</label>
+                    <input id="buildingApplicant" type="text" minlength="2" maxlength="50" pattern="[A-Za-z ]{2,50}"
+                        required>
+
+                    <label>Property Address</label>
+                    <textarea id="buildingAddress" minlength="5" maxlength="300" required></textarea>
+
+                    <label>Project Type</label>
+                    <select id="buildingType" required>
+                        <option value="">Select type</option>
+                        <option>Residential</option>
+                        <option>Commercial</option>
+                        <option>Industrial</option>
+                    </select>
+
+                    <button class="btn-primary full-width" type="submit">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- TRADE LICENCE -->
+        <section id="trade" class="page form-page">
+            <div class="form-container">
+                <span class="eyebrow">BUSINESS SERVICES</span>
+                <h1>Trade Licence</h1>
+
+                <form id="tradeForm">
+                    <label>Business Name</label>
+                    <input id="businessName" type="text" minlength="2" maxlength="100" required>
+
+                    <label>Applicant Name</label>
+                    <input id="tradeApplicant" type="text" minlength="2" maxlength="50" pattern="[A-Za-z ]{2,50}"
+                        required>
+
+                    <label>Business Address</label>
+                    <textarea id="tradeAddress" minlength="5" maxlength="300" required></textarea>
+
+                    <button class="btn-primary full-width" type="submit">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PROFILE -->
+        <section id="profile" class="page form-page">
+            <div class="form-container">
+                <span class="eyebrow">ACCOUNT MANAGEMENT</span>
+                <h1>My Profile</h1>
+
+                <div id="profileDetails"></div>
+
+                <button class="btn-outline" onclick="logout()">
+                    Logout
+                </button>
+            </div>
+        </section>
+
+        <!-- ADMIN LOGIN -->
+        <section id="adminLogin" class="page auth-page">
+            <div class="auth-card">
+                <span class="eyebrow">AUTHORIZED PERSONNEL</span>
+                <h2>Administrator Login</h2>
+
+                <form id="adminLoginForm">
+                    <label>Admin Email</label>
+                    <input id="adminEmail" type="email" required>
+
+                    <label>Password</label>
+                    <input id="adminPassword" type="password" required>
+
+                    <button class="btn-primary full-width" type="submit">
+                        Access Admin Dashboard
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ADMIN DASHBOARD -->
+        <section id="admin" class="page dashboard-page">
+
+            <div class="dashboard-heading">
+                <div>
+                    <span class="eyebrow">ADMINISTRATION</span>
+                    <h1>Admin Dashboard</h1>
+                    <p>Monitor and manage citizen requests.</p>
+                </div>
+
+                <button class="btn-outline" onclick="logout()">Logout</button>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <span>Total Complaints</span>
+                    <h2 id="adminTotal">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Pending</span>
+                    <h2 id="adminPending">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>Resolved</span>
+                    <h2 id="adminResolved">0</h2>
+                </div>
+            </div>
+
+            <h2>Complaint Management</h2>
+            <div id="adminComplaints"></div>
+
+            <h2>Application Management</h2>
+            <div id="adminApplications"></div>
+
+            <h2>Citizen Feedback</h2>
+            <div id="adminFeedback"></div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="page section">
+            <div class="section-heading">
+                <span class="eyebrow">OUR MISSION</span>
+                <h1>About ONE AHMEDABAD</h1>
+
+                <p>
+                    ONE AHMEDABAD is a proposed unified digital citizen
+                    services platform designed to make municipal services
+                    easier to discover, access and track.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h2>Our Vision</h2>
+                <p>
+                    To bring municipal services into one accessible digital
+                    platform, enabling citizens to discover services, submit
+                    requests, make payments, receive guidance and track
+                    progress through a unified digital experience.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- AI CHATBOT -->
+    <div class="chatbot-widget">
+
+        <button class="chatbot-toggle" onclick="toggleChat()" aria-label="Open AI citizen assistant">
+            ✦
+        </button>
+
+        <div class="chatbot-panel" id="chatbotPanel">
+
+            <div class="chatbot-header">
+                <div>
+                    <h3>Ahmedabad AI Assistant</h3>
+                    <span>Citizen Service Support</span>
+                </div>
+
+                <button onclick="toggleChat()">×</button>
+            </div>
+
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="bot-message">
+                    Hello! Welcome to ONE AHMEDABAD.
+                    How can I help you today?
+                </div>
+            </div>
+
+            <div class="chatbot-suggestions">
+                <button onclick="sendQuickMessage('How can I report a complaint?')">
+                    Report complaint
+                </button>
+
+                <button onclick="sendQuickMessage('How can I track my request?')">
+                    Track request
+                </button>
+            </div>
+
+            <form id="chatForm" class="chat-input-area">
+                <input id="chatInput" placeholder="Ask me anything..." autocomplete="off" required>
+
+                <button type="submit">➤</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <h2>ONE AHMEDABAD</h2>
+            <p>One City. One Platform. Better Services.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#" onclick="showPage('services')">Services</a>
+            <a href="#" onclick="showPage('complaints')">Complaints</a>
+            <a href="#" onclick="showPage('about')">About Us</a>
+            <a href="#" onclick="showPage('adminLogin')">Admin</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 ONE AHMEDABAD. Student-developed demonstration platform.
+            Not an official AMC-operated service.
+        </p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
